@@ -1,0 +1,98 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="PackagePart"
+  DTS:CreationDate="2/26/2021 11:44:02 PM"
+  DTS:CreationName="Microsoft.DTSPackagePart"
+  DTS:CreatorComputerName="DESKTOP-MO6K1QN"
+  DTS:CreatorName="DESKTOP-MO6K1QN\damaro"
+  DTS:DTSID="{90550078-69BD-47C3-ACC9-20A607F67723}"
+  DTS:ExecutableType="Microsoft.DTSPackagePart"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="PackagePart1"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{8AECEE74-E29C-4D76-8305-78112AABA43C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="PackagePart.ConnectionManagers[Mawatta]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{9A6C8518-9799-4353-B832-6E2643C53ED6}"
+      DTS:ObjectName="Mawatta">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Mawatta" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="PackagePart\Crée le repertoire"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:DelayValidation="True"
+      DTS:Description="Tâche de système de fichiers"
+      DTS:DTSID="{340b2aa9-42cf-4b2f-b215-28db55b7013d}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crée le repertoire"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">1,19,FileSystemOperation</DTS:Property>
+        <DTS:Property
+          DTS:EventName="FileSystemOperation"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+      </DTS:LoggingOptions>
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="CreateDirectory"
+          TaskSourcePath="User::chemainDestination"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="Destination" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <PackagePart
+    design-time-name="PackagePart">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="PackagePart\Crée le repertoire"
+          TopLeft="127.142859308087,47.4117653708145" />
+      </GraphLayout>
+    </LayoutInfo>
+  </PackagePart>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

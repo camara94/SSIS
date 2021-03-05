@@ -1,0 +1,1292 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/27/2021 12:51:08 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-MO6K1QN"
+  DTS:CreatorName="DESKTOP-MO6K1QN\damaro"
+  DTS:DTSID="{FEB5849C-B04E-4854-BCF0-10271403265F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{7321B2FD-2EEE-4738-A7FF-54F9F32FC6CC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9E800663-2CAB-4BFC-972D-5ADFF6B3A180}"
+      DTS:ObjectName="DESKTOP-MO6K1QN.ssis">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-MO6K1QN;Initial Catalog=ssis;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E077E4D2-CC82-442D-8D8E-568A61ACEFE8}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\toilettes-publiques-dans-le-reseau-ratp.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ligne"
+              DTS:DTSID="{9F66248A-F164-4DA6-8739-7AB3E58B3E61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Station"
+              DTS:DTSID="{2DD925FD-F911-4E2E-9C47-9DFDBDF079E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accessible au public"
+              DTS:DTSID="{D133AB76-DDA5-4D00-B0A1-93D94B529CCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tarif  Gratuit|Payant "
+              DTS:DTSID="{4FFC4B22-E75A-4146-9D6B-03D0FB5C880D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Acces Passe Navigo ou Ticket T+"
+              DTS:DTSID="{34F0E24E-81C9-447F-BA7C-7CAD6D1BC592}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Acces Bouton poussoir"
+              DTS:DTSID="{C4E7873A-0556-4A3D-8466-ACEBED290EF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="En zone controlee"
+              DTS:DTSID="{0561A2E8-FA3F-47A2-B312-A6474D354F43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hors zone controlee station"
+              DTS:DTSID="{F6876B44-0D07-4CCC-9FB9-5D94D959C82E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hors zone controlee voie publique"
+              DTS:DTSID="{CFFC3F1B-79E1-418A-BC36-C0D3998A05AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accessibilite PMR"
+              DTS:DTSID="{499AA2E3-8A85-43B3-AEA7-7FAAAD7CD329}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coord_geo"
+              DTS:DTSID="{B4948832-3C90-49EE-B34F-6109FAEBFABD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gestionnaire"
+              DTS:DTSID="{9E75E3B3-2E4B-4A0E-B443-3DD67FD4BA5B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[source toilette]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{13B4AD85-1A79-45B6-8AB0-47B681645913}"
+      DTS:ObjectName="source toilette">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\toilettes-publiques-dans-le-reseau-ratp.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ligne;Station;Accessible au public;Tarif  Gratuit"
+              DTS:DTSID="{633AC74E-7647-4963-9645-1D2C51B60C9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payant ;Acces Passe Navigo ou Ticket T+;Acces Bouton poussoir;En zone controlee;Hors zone controlee station;Hors zone controlee voie publique;Accessibilite PMR;coord_geo;gestionnaire"
+              DTS:DTSID="{F93E5EAE-C6F4-4738-986C-B479435CD535}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Charge CSV dans MSQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{F9CDD76A-A198-41F4-AB53-AFEA2F8FE8B7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Charge CSV dans MSQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Charge CSV dans MSQL\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[accessible_au_public]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="accessible_au_public"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessible_au_public]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[acces_passe_navigo_ou_ticket]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="acces_passe_navigo_ou_ticket"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_passe_navigo_ou_ticket]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[acces_bouton_poussoir]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="acces_bouton_poussoir"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_bouton_poussoir]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[en_zone_controlee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="en_zone_controlee"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[en_zone_controlee]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[hors_zone_controlee_station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hors_zone_controlee_station"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_station]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[hors_zone_controlee_voie_publique]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hors_zone_controlee_voie_publique"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_voie_publique]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[accessibilite_pmr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="accessibilite_pmr"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessibilite_pmr]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessible_au_public_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessible_au_public_b]"
+                      name="accessible_au_public_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessible_au_public]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">accessible_au_public == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_passe_navigo_ou_ticket_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_passe_navigo_ou_ticket_b]"
+                      name="acces_passe_navigo_ou_ticket_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_passe_navigo_ou_ticket]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">acces_passe_navigo_ou_ticket == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_bouton_poussoir_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_bouton_poussoir_b]"
+                      name="acces_bouton_poussoir_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_bouton_poussoir]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">acces_bouton_poussoir == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[en_zone_controlee_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[en_zone_controlee_b]"
+                      name="en_zone_controlee_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[en_zone_controlee]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">en_zone_controlee == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_station_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_station_b]"
+                      name="hors_zone_controlee_station_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_station]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">hors_zone_controlee_station == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_voie_publique_b]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_voie_publique_b]"
+                      name="hors_zone_controlee_voie_publique_b"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_voie_publique]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">hors_zone_controlee_voie_publique == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessibilite_pmr]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessibilite_pmr]"
+                      name="accessibilite_pmr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">#{Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessibilite_pmr]} == "oui" ?  TRUE  :  FALSE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">accessibilite_pmr == "oui" ?  TRUE  :  FALSE </property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Charge CSV dans MSQL\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[toilette_ratp]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Charge CSV dans MSQL\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ligne]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ligne"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ligne]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ligne]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="station"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[station]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[station]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[tarif]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tarif"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[tarif]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tarif]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[gestionnaire]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gestionnaire"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[gestionnaire]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[gestionnaire]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[latitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[latitude]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[longitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[longitude]"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[accessible_au_public_b]"
+                      cachedDataType="bool"
+                      cachedName="accessible_au_public_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessible_au_public]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessible_au_public_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[acces_passe_navigo_ou_ticket_b]"
+                      cachedDataType="bool"
+                      cachedName="acces_passe_navigo_ou_ticket_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_passe_navigo_ou_ticket_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[acces_bouton_poussoir_b]"
+                      cachedDataType="bool"
+                      cachedName="acces_bouton_poussoir_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[acces_bouton_poussoir_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[en_zone_controlee_b]"
+                      cachedDataType="bool"
+                      cachedName="en_zone_controlee_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[en_zone_controlee]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[en_zone_controlee_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[hors_zone_controlee_station_b]"
+                      cachedDataType="bool"
+                      cachedName="hors_zone_controlee_station_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_station_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[hors_zone_controlee_voie_publique_b]"
+                      cachedDataType="bool"
+                      cachedName="hors_zone_controlee_voie_publique_b"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[hors_zone_controlee_voie_publique_b]" />
+                    <inputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[accessibilite_pmr]"
+                      cachedDataType="bool"
+                      cachedName="accessibilite_pmr"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessibilite_pmr]"
+                      lineageId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[accessibilite_pmr]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ligne" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="station" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessible_au_public]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessible_au_public" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[tarif]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tarif" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_passe_navigo_ou_ticket" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_bouton_poussoir" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[en_zone_controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="en_zone_controlee" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_station" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_voie_publique" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessibilite_pmr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessibilite_pmr" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gestionnaire" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="longitude" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Charge CSV dans MSQL\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Charge CSV dans MSQL\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[toilette_ratp_int]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Charge CSV dans MSQL\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ligne]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ligne]"
+                      name="ligne"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[station]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[station]"
+                      name="station"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessible_au_public]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[accessible_au_public]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessible_au_public]"
+                      name="accessible_au_public"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tarif]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[tarif]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[tarif]"
+                      name="tarif"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_passe_navigo_ou_ticket]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_passe_navigo_ou_ticket]"
+                      name="acces_passe_navigo_ou_ticket"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_bouton_poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[acces_bouton_poussoir]"
+                      name="acces_bouton_poussoir"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[en_zone_controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[en_zone_controlee]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[en_zone_controlee]"
+                      name="en_zone_controlee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_station]"
+                      name="hors_zone_controlee_station"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_voie_publique]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[hors_zone_controlee_voie_publique]"
+                      name="hors_zone_controlee_voie_publique"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessibilite_pmr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[accessibilite_pmr]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[accessibilite_pmr]"
+                      name="accessibilite_pmr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[gestionnaire]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[gestionnaire]"
+                      name="gestionnaire"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[latitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[latitude]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[longitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[longitude]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[coord_geo]"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[coord_geo]"
+                      name="coord_geo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ligne" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="station" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[accessible_au_public]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessible_au_public" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[tarif]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tarif" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_passe_navigo_ou_ticket" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_bouton_poussoir" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[en_zone_controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="en_zone_controlee" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_station" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_voie_publique" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[accessibilite_pmr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessibilite_pmr" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gestionnaire" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="coord_geo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ligne]"
+                      name="ligne" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[station]"
+                      name="station" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[accessible_au_public]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[accessible_au_public]"
+                      name="accessible_au_public" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[tarif]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[tarif]"
+                      name="tarif" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[acces_passe_navigo_ou_ticket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[acces_passe_navigo_ou_ticket]"
+                      name="acces_passe_navigo_ou_ticket" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[acces_bouton_poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[acces_bouton_poussoir]"
+                      name="acces_bouton_poussoir" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[en_zone_controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[en_zone_controlee]"
+                      name="en_zone_controlee" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[hors_zone_controlee_station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[hors_zone_controlee_station]"
+                      name="hors_zone_controlee_station" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[hors_zone_controlee_voie_publique]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[hors_zone_controlee_voie_publique]"
+                      name="hors_zone_controlee_voie_publique" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[accessibilite_pmr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[accessibilite_pmr]"
+                      name="accessibilite_pmr" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[coord_geo]"
+                      name="coord_geo" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[gestionnaire]"
+                      name="gestionnaire" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[latitude]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[latitude]"
+                      name="latitude" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[longitude]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[longitude]"
+                      name="longitude" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Charge CSV dans MSQL.Paths[Sortie de colonne dérivée]"
+              endId="Package\Charge CSV dans MSQL\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Charge CSV dans MSQL\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Charge CSV dans MSQL.Paths[Sortie de source OLE DB]"
+              endId="Package\Charge CSV dans MSQL\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source OLE DB"
+              startId="Package\Charge CSV dans MSQL\Source OLE DB.Outputs[Sortie de source OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Charge CSV dans MSQL"
+          TopLeft="186.928574518282,43.7352946538826" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Charge CSV dans MSQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Charge CSV dans MSQL\Colonne dérivée"
+          TopLeft="267.142861692273,100.94117788625" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Charge CSV dans MSQL\Destination OLE DB"
+          TopLeft="260.714290154224,188.88235559018" />
+        <EdgeLayout
+          Id="Package\Charge CSV dans MSQL.Paths[Sortie de colonne dérivée]"
+          TopLeft="345.128575923248,142.54117788625">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.34117770393"
+              Start="0,0"
+              End="0,38.84117770393">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.84117770393" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Charge CSV dans MSQL\Source OLE DB"
+          TopLeft="195.71428904728,14.5294119684754" />
+        <EdgeLayout
+          Id="Package\Charge CSV dans MSQL.Paths[Sortie de source OLE DB]"
+          TopLeft="270.51428904728,56.1294119684754">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.8285726449927,44.8117659177747"
+              Start="0,0"
+              End="73.8285726449927,37.3117659177747">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4058829588874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4058829588874"
+                    Point2="0,22.4058829588874"
+                    Point3="4,22.4058829588874" />
+                  <mssgle:LineSegment
+                    End="69.8285726449927,22.4058829588874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.8285726449927,22.4058829588874"
+                    Point2="73.8285726449927,22.4058829588874"
+                    Point3="73.8285726449927,26.4058829588874" />
+                  <mssgle:LineSegment
+                    End="73.8285726449927,37.3117659177747" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Charge CSV dans MSQL\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Charge CSV dans MSQL\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

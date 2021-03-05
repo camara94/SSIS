@@ -1,0 +1,1450 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/27/2021 9:37:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-MO6K1QN"
+  DTS:CreatorName="DESKTOP-MO6K1QN\damaro"
+  DTS:DTSID="{FCD79BDB-A72A-488B-9584-20951215C508}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="creationdecolonne"
+  DTS:PackageType="5"
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{339AB5AB-B0A1-4600-87EB-242D0546CCD8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A6A35C9A-BE98-48FC-A0FE-08DEB6BD4693}"
+      DTS:ObjectName="DESKTOP-MO6K1QN.ssis">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-MO6K1QN;Initial Catalog=ssis;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[dest_log_lat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DB8D0126-217D-4BFA-A958-14D5D3B45485}"
+      DTS:ObjectName="dest_log_lat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\long_lat.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ligne"
+              DTS:DTSID="{6B9EF648-30DF-4045-BABC-EABEF1D34F76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="station"
+              DTS:DTSID="{CD838F3B-4BDF-405B-85C2-045777702438}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accessible_au_public"
+              DTS:DTSID="{33749BA5-6A1B-4186-A099-6E0E4448E750}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tarif "
+              DTS:DTSID="{E5B71AD1-58FD-4AEA-ACC1-8FC049D3DEE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="acces_passe_navigo_ou_ticket"
+              DTS:DTSID="{93154C19-3617-4A30-94EC-682A93DDD519}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="acces_bouton_poussoir"
+              DTS:DTSID="{F61C33A1-FA47-4647-8FAC-3307435FC210}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="en_zone_controlee"
+              DTS:DTSID="{4935FA5A-294F-40A7-B8C8-574AA8033A80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hors_zone_controlee_station"
+              DTS:DTSID="{71EEB88D-E233-4336-99AE-C38097EAD933}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hors_zone_controlee_voie publique"
+              DTS:DTSID="{ED8E60CD-1993-4BAC-A18D-700669B42065}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accessibilite_pmr"
+              DTS:DTSID="{79A7DC91-D17B-4E43-80F2-89EB20D1BEF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coord_geo"
+              DTS:DTSID="{F613172E-8BAE-462F-A8C5-89B7E6562B7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gestionnaire"
+              DTS:DTSID="{928ECF82-0661-4929-921C-BB624BFFE9F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{C5632D9C-5ABA-4B85-9057-629BE5C869A7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fichier]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1D60E1CC-56E8-4EE5-8C51-CFB73F3ECDF7}"
+      DTS:ObjectName="fichier">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\toilettes-publiques-dans-le-reseau-ratp.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ligne;Station;Accessible au public;Tarif  Gratuit"
+              DTS:DTSID="{5BDC8383-F642-4DEE-93A4-8C94FD82ECDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payant ;Acces Passe Navigo ou Ticket T+;Acces Bouton poussoir;En zone controlee;Hors zone controlee station;Hors zone controlee voie publique;Accessibilite PMR;coord_geo;gestionnaire"
+              DTS:DTSID="{7468B092-0DC1-47BA-AC85-F962A89913E1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4316D924-B22B-4A54-AB63-9A66C2A7AD8C}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\long_lat.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ligne"
+              DTS:DTSID="{C92F06E8-81AA-44BF-BF71-0792AE7DE6D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="station"
+              DTS:DTSID="{C3A24901-AB1D-4393-93A0-923095CDDD0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accessible_au_public"
+              DTS:DTSID="{671F42A6-BB15-4D25-B27F-C65DFC73DBF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tarif "
+              DTS:DTSID="{7EFC9E2B-9064-4AB4-9D5C-E6D5E782A6BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="acces_passe_navigo_ou_ticket"
+              DTS:DTSID="{7B8FBB3D-D9F4-4257-811C-0AA8887563BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="acces_bouton_poussoir"
+              DTS:DTSID="{70AB95AC-E945-4107-AFA6-AF300A725B7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="en_zone_controlee"
+              DTS:DTSID="{13614AB4-51B7-4B68-AF90-C1EFA9DE1C04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hors_zone_controlee_station"
+              DTS:DTSID="{B6B2517E-2FBB-4300-8C37-AB1E007EEE58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hors_zone_controlee_voie publique"
+              DTS:DTSID="{4615C67F-967D-4EE4-AD33-E043F1942615}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accessibilite_pmr"
+              DTS:DTSID="{E2857FE5-D1D7-4944-A776-F505E9D08DD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coord_geo"
+              DTS:DTSID="{9FC66A95-D792-452F-832C-379E46398A27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gestionnaire"
+              DTS:DTSID="{37489DA2-1FB5-418B-8654-34D4D227D9CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{B16EA6B4-F3BA-4DCD-BA74-C0576448962C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{61974E88-F3E2-482C-9A4F-8E26B5975073}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{49803279-5B06-407C-9E74-90291281BF9E}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damaro\Desktop\mestraveaux\linkedin\ssis\my_work_flow\mes_fichiers\Destination\toilettes-publiques-dans-le-reseau-ratp.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ligne"
+              DTS:DTSID="{D23E1A28-8E61-4FE0-AAAF-75A4F6436C1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Station"
+              DTS:DTSID="{48C113ED-B402-4D54-A68B-823E5E896B22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accessible au public"
+              DTS:DTSID="{446C8CEC-C7A4-4EAC-824E-B77B06CD5B42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tarif  Gratuit|Payant "
+              DTS:DTSID="{ABF0ECAB-CCEE-48D4-A22E-F11709658A1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Acces Passe Navigo ou Ticket T+"
+              DTS:DTSID="{CE3D1846-2D7B-4902-A0A2-2FCE459F8C8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Acces Bouton poussoir"
+              DTS:DTSID="{0F182EF4-BD86-47B7-8FDE-50DF01E5065B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="En zone controlee"
+              DTS:DTSID="{CDA2E23C-E445-450A-9967-88BE2CC9A1F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hors zone controlee station"
+              DTS:DTSID="{D769DEDB-8FC0-4A09-AF5D-8C5F18236668}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hors zone controlee voie publique"
+              DTS:DTSID="{B66ED9D6-EB26-405F-BD5F-39DD0FECFB26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accessibilite PMR"
+              DTS:DTSID="{6140E39C-2887-4130-8AAE-1FC6FEDBCCBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coord_geo"
+              DTS:DTSID="{C41936D6-98DC-4962-9EC9-5834E28BFFCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gestionnaire"
+              DTS:DTSID="{1DEF0C53-6569-479F-B2E3-3F40AF44602B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E61D2C01-9470-469A-88BE-304DF13DAC87}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="test">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Création de Colonne"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{D525D5D5-B532-4A4C-AFD6-A33EB30FC411}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Création de Colonne"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Création de Colonne\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Création de Colonne\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Création de Colonne\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[coord_geo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="coord_geo"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\Création de Colonne\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[latitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[LEN](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]}) &gt; 0 ? [LEFT](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]},[FINDSTRING](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]},",",1) - 1) : "0"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LEN(coord_geo) &gt; 0 ? LEFT(coord_geo,FINDSTRING(coord_geo,",",1) - 1) : "0"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[longitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[LEN](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]}) &gt; 0 ? [RIGHT](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]},[FINDSTRING](#{Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]},",",1) - 1) : "0"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LEN(coord_geo) &gt; 0 ? RIGHT(coord_geo,FINDSTRING(coord_geo,",",1) - 1) : "0"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\Création de Colonne\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Création de Colonne\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[toilette_ratp_int]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Création de Colonne\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MO6K1QN.ssis]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[gestionnaire]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gestionnaire"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[gestionnaire]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[gestionnaire]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[latitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[latitude]"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[longitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[longitude]"
+                      lineageId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Ligne]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ligne"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ligne]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Ligne]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Station"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[station]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Station]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Accessible au public]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accessible au public"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessible_au_public]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessible au public]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Tarif  Gratuit|Payant ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Tarif  Gratuit|Payant "
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[tarif]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Tarif  Gratuit|Payant ]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Acces Passe Navigo ou Ticket T+]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Acces Passe Navigo ou Ticket T+"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Passe Navigo ou Ticket T+]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Acces Bouton poussoir]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Acces Bouton poussoir"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Bouton poussoir]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[En zone controlee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="En zone controlee"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[en_zone_controlee]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[En zone controlee]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Hors zone controlee station]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hors zone controlee station"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee station]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Hors zone controlee voie publique]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Hors zone controlee voie publique"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee voie publique]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Accessibilite PMR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accessibilite PMR"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessibilite_pmr]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessibilite PMR]" />
+                    <inputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[coord_geo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="coord_geo"
+                      externalMetadataColumnId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[coord_geo]"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gestionnaire" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ligne" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="station" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessible_au_public]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessible_au_public" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[tarif]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tarif" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_passe_navigo_ou_ticket]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_passe_navigo_ou_ticket" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[acces_bouton_poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="acces_bouton_poussoir" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[en_zone_controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="en_zone_controlee" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_station" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[hors_zone_controlee_voie_publique]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hors_zone_controlee_voie_publique" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[accessibilite_pmr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accessibilite_pmr" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="coord_geo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Création de Colonne\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Création de Colonne\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Création de Colonne\Source du fichier plat"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1036"
+              name="Source du fichier plat"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Création de Colonne\Source du fichier plat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Ligne]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Ligne]"
+                      name="Ligne"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Station]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Station]"
+                      name="Station"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessible au public]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Accessible au public]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessible au public]"
+                      name="Accessible au public"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Tarif  Gratuit|Payant ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Tarif  Gratuit|Payant ]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Tarif  Gratuit|Payant ]"
+                      name="Tarif  Gratuit|Payant "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Passe Navigo ou Ticket T+]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Acces Passe Navigo ou Ticket T+]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Passe Navigo ou Ticket T+]"
+                      name="Acces Passe Navigo ou Ticket T+"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Bouton poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Acces Bouton poussoir]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Acces Bouton poussoir]"
+                      name="Acces Bouton poussoir"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[En zone controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[En zone controlee]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[En zone controlee]"
+                      name="En zone controlee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee station]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Hors zone controlee station]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee station]"
+                      name="Hors zone controlee station"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee voie publique]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Hors zone controlee voie publique]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Hors zone controlee voie publique]"
+                      name="Hors zone controlee voie publique"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessibilite PMR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Accessibilite PMR]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Accessibilite PMR]"
+                      name="Accessibilite PMR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[coord_geo]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[coord_geo]"
+                      name="coord_geo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[gestionnaire]"
+                      length="50"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[gestionnaire]"
+                      name="gestionnaire"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Ligne]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ligne" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Station" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Accessible au public]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accessible au public" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Tarif  Gratuit|Payant ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tarif  Gratuit|Payant " />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Acces Passe Navigo ou Ticket T+]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Acces Passe Navigo ou Ticket T+" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Acces Bouton poussoir]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Acces Bouton poussoir" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[En zone controlee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="En zone controlee" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Hors zone controlee station]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hors zone controlee station" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Hors zone controlee voie publique]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hors zone controlee voie publique" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Accessibilite PMR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accessibilite PMR" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[coord_geo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="coord_geo" />
+                    <externalMetadataColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[gestionnaire]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gestionnaire" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Création de Colonne.Paths[Sortie de colonne dérivée]"
+              endId="Package\Création de Colonne\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\Création de Colonne\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\Création de Colonne.Paths[Sortie de source de fichier plat]"
+              endId="Package\Création de Colonne\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Création de Colonne\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Création de Colonne"
+          TopLeft="136.928573666787,22.3235296477084" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Création de Colonne">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Création de Colonne\Source du fichier plat"
+          TopLeft="99.28571597654,4.58823535846591" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Création de Colonne\Colonne dérivée"
+          TopLeft="166.428574262834,97.7882360877463" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Création de Colonne\Destination OLE DB"
+          TopLeft="132.142859393237,185.823532017869" />
+        <EdgeLayout
+          Id="Package\Création de Colonne.Paths[Sortie de source de fichier plat]"
+          TopLeft="188.48571597654,46.1882353584659">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.142858286294,51.6000007292804"
+              Start="0,0"
+              End="55.142858286294,44.1000007292804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8000003646402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8000003646402"
+                    Point2="0,25.8000003646402"
+                    Point3="4,25.8000003646402" />
+                  <mssgle:LineSegment
+                    End="51.142858286294,25.8000003646402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.142858286294,25.8000003646402"
+                    Point2="55.142858286294,25.8000003646402"
+                    Point3="55.142858286294,29.8000003646402" />
+                  <mssgle:LineSegment
+                    End="55.142858286294,44.1000007292804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Création de Colonne.Paths[Sortie de colonne dérivée]"
+          TopLeft="243.628574262834,139.388236087746">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-26.2857148695973,46.4352959301229"
+              Start="0,0"
+              End="-26.2857148695973,38.9352959301229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2176479650614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2176479650614"
+                    Point2="0,23.2176479650614"
+                    Point3="-4,23.2176479650614" />
+                  <mssgle:LineSegment
+                    End="-22.2857148695973,23.2176479650614" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.2857148695973,23.2176479650614"
+                    Point2="-26.2857148695973,23.2176479650614"
+                    Point3="-26.2857148695973,27.2176479650614" />
+                  <mssgle:LineSegment
+                    End="-26.2857148695973,38.9352959301229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Création de Colonne\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

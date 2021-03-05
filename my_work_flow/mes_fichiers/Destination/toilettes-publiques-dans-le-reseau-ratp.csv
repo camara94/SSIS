@@ -1,0 +1,49 @@
+Ligne;Station;Accessible au public;Tarif [Gratuit|Payant];Acces Passe Navigo ou Ticket T+;Acces Bouton poussoir;En zone controlee;Hors zone controlee station;Hors zone controlee voie publique;Accessibilite PMR;coord_geo;gestionnaire
+5;Bobigny - Pablo Picasso;oui;gratuit;;oui;;oui;;non;48.9071744532, 2.44926669558;Toilette publique  RATP
+A;La Defense (Grande Arche);oui;gratuit;;oui;;oui;;oui;48.8918267548, 2.23799204322;Toilette publique  RATP
+A;Nanterre - Prefecture;oui;gratuit;;oui;oui;;;oui;48.8971999, 2.222709;Toilette publique  RATP
+A;Nanterre - Ville;oui;gratuit;;oui;oui;;;oui;48.895046271, 2.19560952099;Toilette publique  RATP
+A;Nogent-sur-Marne;oui;gratuit;;oui;;oui;;oui;48.8351087742, 2.47168391616;Toilette publique  RATP
+B;Gif-sur-Yvette;oui;gratuit;;oui;;oui;;oui;48.6981859, 2.1367431;Toilette publique  RATP
+1;Charles de Gaulle - Etoile;oui;gratuit;;oui;;oui;;non;48.8744527757, 2.2963258095;Toilette publique  RATP
+14;Bibliotheque Francois Mitterrand;oui;gratuit;;oui;;oui;;oui;48.8297852635, 2.37760379931;Toilette publique  RATP
+14;Gare de Lyon;oui;gratuit;;oui;;oui;;oui;48.8439152396, 2.37288976988;Toilette publique  RATP
+14;Olympiades;oui;gratuit;;oui;;oui;;oui;48.8269104, 2.3661972;Toilette publique  RATP
+A;Auber;oui;gratuit;;oui;oui;;;oui;48.8731477, 2.3295277;Toilette publique  RATP
+A;Charles de Gaulle - Etoile;oui;gratuit;;oui;oui;;;non;48.8740658, 2.2951493;Toilette publique  RATP
+A;Chatelet;non;;;;;;;;48.8582910264, 2.34832818425;Toilette publique  RATP
+A;Gare de Lyon;oui;gratuit;;oui;oui;;;oui;48.84436, 2.37291;Toilette publique  RATP
+A;Nation;oui;gratuit;;oui;oui;;;oui;48.8484803444, 2.39676520958;Toilette publique  RATP
+A;Noisy-le-Grand - Mont d'Est;oui;gratuit;;oui;;oui;;oui;48.84082, 2.55154;Toilette publique  RATP
+B;Denfert-Rochereau;oui;gratuit;;oui;oui;;;non;48.8332144, 2.3333365;Toilette publique  RATP
+B;Gentilly;oui;gratuit;;oui;oui;;;oui;48.8153713, 2.3408362;Toilette publique  RATP
+6;Trocadero;oui;gratuit;;;;;;oui;48.864195005, 2.28784733866;Toilette publique  RATP
+7;Villejuif - Louis Aragon;oui;gratuit;oui;;;;oui;oui;48.7873030427, 2.36741015213;Toilette publique  RATP
+13;Les Agnettes;oui;gratuit;;oui;;oui;;oui;48.9231769938, 2.28605910173;Toilette publique  RATP
+14;Cour Saint-Emilion;oui;gratuit;;oui;;oui;;oui;48.83346, 2.38607;Toilette publique  RATP
+A;Charles de Gaulle - Etoile;oui;gratuit;;oui;oui;;;oui;48.8734641909, 2.29638108801;Toilette publique  RATP
+A;Chatelet;non;;;;;;;;48.8622381, 2.345496;Toilette publique  RATP
+A;Noisy-le-Grand - Mont d'Est;oui;gratuit;;oui;oui;;;oui;48.84078, 2.54804;Toilette publique  RATP
+A;Saint-Germain-en-Laye;oui;payant;;;;oui;;oui;48.8978899, 2.0947665;Toilette publique  RATP
+A;Saint-Maur - Creteil;oui;gratuit;oui;;;;oui;oui;48.806419609, 2.47204505095;Toilette publique  RATP
+B;Antony;oui;gratuit;;oui;oui;;;oui;48.754827485, 2.3008650706;Toilette publique  RATP
+B;Massy - Palaiseau;oui;gratuit;oui;;;;oui;oui;48.725109, 2.2606361;Toilette publique  RATP
+B;Robinson;oui;gratuit;;oui;oui;;;oui;48.7803641766, 2.28169822373;Toilette publique  RATP
+10;Cluny - La Sorbonne;oui;payant;oui;;;;;oui;48.8507957557, 2.34503088837;Toilette publique  RATP
+12;Concorde;non;gratuit;;oui;oui;;;;48.8669992312, 2.32113887;Toilette publique  RATP
+13;Asnieres-Gennevilliers - Les Courtilles;oui;gratuit;;oui;oui;;;oui;48.9307430525, 2.2839511234;Toilette publique  RATP
+14;Bercy;oui;gratuit;;oui;oui;;;oui;48.8401922444, 2.37947725727;Toilette publique  RATP
+A;Chatelet;non;;;;;;;;48.8588572844, 2.34776985674;Toilette publique  RATP
+A;Marne-la-Vallee - Chessy;oui;gratuit;;oui;oui;;;oui;48.8684969702, 2.78225973056;Toilette publique  RATP
+A;Nanterre - Universite;oui;gratuit;;oui;;oui;;oui;48.9012519062, 2.21599944;Toilette publique  RATP
+A;Val d'Europe;oui;gratuit;;oui;;oui;;oui;48.8554970483, 2.77360843322;Toilette publique  RATP
+B;Cite Universitaire;oui;gratuit;;oui;;oui;;non;48.8205877, 2.3390071;Toilette publique  RATP
+14;Madeleine;oui;gratuit;;oui;;oui;;oui;48.869956563, 2.32534764746;Toilette publique  RATP
+14;Pyramides;oui;gratuit;;oui;;oui;;oui;48.8656737, 2.3344599;Toilette publique  RATP
+14;Saint Lazare;oui;gratuit;;oui;;oui;;oui;48.8755285693, 2.3241201113;Toilette publique  RATP
+A;Rueil-Malmaison;oui;gratuit;;oui;oui;;;oui;48.8872220605, 2.17062320493;Toilette publique  RATP
+A;Saint-Germain-en-Laye;oui;gratuit;;oui;oui;;;oui;48.8979364, 2.0948768;Toilette publique  RATP
+B;Arcueil Cachan;oui;gratuit;oui;;;;oui;oui;;Toilette publique  RATP
+B;Bourg-la-Reine;oui;gratuit;;oui;oui;;;oui;48.7800509378, 2.31216262596;Toilette publique  RATP
+B;Laplace;oui;gratuit;oui;;;;oui;oui;48.8078440474, 2.33302280652;Toilette publique  RATP
+B;Saint-Remy-les-Chevreuse;oui;gratuit;oui;;;;oui;oui;48.7028686842, 2.07060021452;Toilette publique  RATP
